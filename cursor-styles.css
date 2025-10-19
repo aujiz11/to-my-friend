@@ -1,0 +1,66 @@
+* {
+    cursor: url('cursor-1.png'), auto !important;
+}
+
+body {
+    cursor: url('cursor-1.png'), auto !important;
+}
+
+a,
+button,
+.cta-button,
+.music-toggle,
+.slider-btn,
+.dot,
+.gift-box,
+.popup-close,
+.photo-item {
+    cursor: url('cursor-2.png'), pointer !important;
+}
+
+a:hover,
+button:hover,
+.cta-button:hover,
+.music-toggle:hover,
+.slider-btn:hover,
+.dot:hover,
+.gift-box:hover,
+.popup-close:hover {
+    cursor: url('cursor-2.png'), pointer !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+.typing-text {
+    cursor: url('cursor-1.png'), text !important;
+}
+
+input,
+textarea {
+    cursor: url('cursor-1.png'), text !important;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    * {
+        cursor: url('cursor-1.png'), auto;
+    }
+}
+
+*:active {
+    cursor: url('cursor-1.png'), pointer !important;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: url('cursor-1.png');
+    visibility: hidden;
+}

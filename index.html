@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to my friend</title>
+    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="photo-fix.css">
+    <link rel="stylesheet" href="cursor-styles.css">
+    <link rel="stylesheet" href="hero-animations.css?v=4">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes bounceDown {
+            0%, 100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(15px);
+                opacity: 0.7;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flowers-container" id="flowersContainer"></div>
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Xin chào Hoeeee<br>
+                <span class="highlight">cốt của tuiiii</span>
+                <span class="heart-icon"><img src="images/flower.svg" width="56" height="56"></span>
+            </h1>
+        </div>
+        <div class="scroll-reminder" style="position: absolute !important; bottom: 50px !important; left: 50% !important; transform: translateX(-50%) !important; z-index: 9999 !important; display: flex !important; flex-direction: column !important; align-items: center !important; gap: 12px !important; opacity: 1 !important; animation: none !important;">
+            <span class="reminder-text" style="font-family: 'Dancing Script', cursive !important; font-size: 1.6rem !important; color: #FF69B4 !important; text-shadow: 0 2px 8px rgba(255, 105, 180, 0.3) !important;">Nhớ kéo xuống nhaa</span>
+            <i class="fas fa-chevron-down" style="font-size: 2.5rem !important; color: #FF69B4 !important; animation: bounceDown 2s ease-in-out infinite !important;"></i>
+        </div>
+    </section>
+    <section class="love-letter" id="loveLetter">
+        <div class="container">
+            <div class="letter-card">
+                <div class="letter-header">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="letter-content">
+                    <p class="typing-text" id="typingText"></p>
+                </div>
+                <div class="letter-footer">
+                    <p class="signature">Với tình bạn chân thành nhất 💕</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <h2 class="section-title">Ở đây chỉ có "Hoa"</h2>
+            <div class="gallery-controls">
+                <button class="music-toggle" id="musicToggle">
+                    <i class="fas fa-music"></i>
+                    <span>Nghe nhạc nhaaa</span>
+                </button>
+            </div>
+            <div class="photo-slider">
+                <button class="slider-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="photo-container">
+                    <div class="photo-wrapper" id="photoWrapper">
+                        <!-- Photos will be dynamically added -->
+                    </div>
+                </div>
+                <button class="slider-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="slider-dots" id="sliderDots"></div>
+        </div>
+    </section>
+    <section class="surprise" id="surprise">
+        <div class="container">
+            <h2 class="section-title">Món quà đặc biệt</h2>
+            <div class="gift-box" id="giftBox">
+                <div class="gift-icon">
+                    <img src="images/gift.svg" width="120" height="120">
+                </div>
+                <p>Nhấn vào để mở quà nhé!</p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="signature-text">
+            <p>– From your best friend,</p>
+            <p class="name">Kiệtt Lê</p>
+        </div>
+        <div class="footer-hearts">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+    </footer>
+
+    <canvas id="fireworksCanvas" class="fireworks-canvas"></canvas>
+
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-content">
+            <button class="popup-close" id="popupClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="popup-hearts">
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart"></i>
+            </div>
+            <h2>Chúc mừng 20/10!</h2>
+            <p>Chúc Hoè luôn hạnh phúc, xinh đẹp và thành công 💖</p>
+            <p class="popup-message">
+                Hoè là một người bạn tuyệt vời, luôn mang lại niềm vui và năng lượng tích cực.
+                Cảm ơn vì đã luôn ở bên tui, vì những lần lắng nghe, chia sẻ,
+                vì tất cả những kỷ niệm đẹp mà chúng ta đã cùng nhau tạo nên.
+                Chúc Thanh Hoe của tui luôn tỏa sáng, luôn giữ được nụ cười rạng rỡ như hiện tại! ✨
+            </p>
+        </div>
+    </div>
+
+    <audio id="bgMusic" loop>
+        <source src="audio/music-bg.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

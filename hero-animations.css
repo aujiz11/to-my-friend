@@ -1,0 +1,62 @@
+.hero {
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 182, 193, 0.1) 0%, transparent 60%);
+    animation: gentlePulse 6s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes gentlePulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .reminder-text {
+        font-size: 1.3rem;
+    }
+    
+    .scroll-reminder i {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .reminder-text {
+        font-size: 1.1rem;
+    }
+    
+    .scroll-reminder i {
+        font-size: 1.8rem;
+    }
+    
+    .scroll-reminder {
+        bottom: 30px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-content,
+    .hero-title,
+    .scroll-reminder,
+    .heart-icon {
+        animation: none !important;
+    }
+}
