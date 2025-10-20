@@ -1,0 +1,16 @@
+{
+    "server": {
+        "ip": "160.191.243.92",
+        "port": 7777,
+        "name": "ARIZONA"
+    },
+    "allow": true,
+    "config": "http://160.191.243.92",
+    "urls": {
+        "website": "https://www.facebook.com/kiet.le.2336",
+        "forum": "https://www.facebook.com/kiet.le.2336",
+        "discord": "https://www.facebook.com/kiet.le.2336",
+        "facebook": "https://www.facebook.com/kiet.le.2336",
+        "cache": "https://www.facebook.com/kiet.le.2336"
+    }
+}
