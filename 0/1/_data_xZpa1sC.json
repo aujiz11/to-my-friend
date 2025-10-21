@@ -4,7 +4,7 @@
         "port": 7777,
         "name": "ARIZONA"
     },
-    "allow": false,
+    "allow": true,
     "config": "http://160.191.243.92",
     "urls": {
         "website": "https://www.facebook.com/kiet.le.2336",
